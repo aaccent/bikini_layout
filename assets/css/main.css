@@ -8590,6 +8590,9 @@ a.underlined:hover:after {
   border-radius: 100%;
   border: 1px solid #fff;
   cursor: pointer;
+  transition-property: background, border-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 }
 @media screen and (max-width: 991px) {
   .gift-price__list-item {
@@ -8600,8 +8603,12 @@ a.underlined:hover:after {
     border-color: rgba(255, 255, 255, 0.2);
   }
 }
-.gift-price__list-item.active {
+.gift-price__list-item:hover {
   background: rgba(255, 255, 255, 0.15);
+  border-color: transparent;
+}
+.gift-price__list-item.active {
+  background: rgba(255, 255, 255, 0.45);
   border-color: transparent;
 }
 
