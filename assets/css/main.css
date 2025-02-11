@@ -6814,7 +6814,7 @@ footer .footer-bottom .links a:nth-child(1) {
     right: 25px;
   }
   .product-list__item:hover .cart {
-    right: 25px;
+    opacity: 1;
   }
 }
 .product-list__item.slider {
@@ -6939,10 +6939,12 @@ footer .footer-bottom .links a:nth-child(1) {
   height: 64px;
   border-radius: 100%;
   background: #fff;
-  top: 550px;
-  right: -85px;
+  bottom: 24px;
+  right: 24px;
   transition: 0.2s all;
   cursor: pointer;
+  z-index: 1;
+  opacity: 0;
 }
 @media screen and (max-width: 991px) {
   .product-list__item .cart {
