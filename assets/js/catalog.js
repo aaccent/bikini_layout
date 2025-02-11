@@ -148,7 +148,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const productListItems = document.querySelectorAll('.product-list__item');
 
-	if (productListItems) {
+
+
+	/**
+	 * @param {MouseEvent} event
+	 * @param {HTMLElement} card
+	 * @param { -1 | 1 } direction положительное число переключает на следующую картинку, отрицательное и ноль на предыдущую
+	 * */
+	function switchImageInProductCard(event, card, direction) {
+		event.preventDefault()
+
+		let activeImg = card.querySelector('.img-list__item.active')
+
+		if (!activeImg) {
+			const firstImg = card.querySelector('.img-list__item')
+			if (!firstImg) {
+				return console.info('Карточка не имеет картинок `.img-list__item`. Карточка:', card)
+			}
+
+			firstImg.classList.add('active')
+			activeImg = firstImg
+		}
+
+		/** @type HTMLElement */
+		let imgForSwitch = direction
+			? activeImg.nextElementSibling
+			: activeImg.previousElementSibling
+
+		// Если нет соседнего элемента или он не картинка
+		if (!imgForSwitch || !imgForSwitch.classList.contains('img-list__item')) {
+			imgForSwitch = direction
+				? card.querySelector('.img-list__item:first-of-type')
+				: card.querySelector('.img-list__item:last-of-type')
+		}
+
+		if (!imgForSwitch) return
+
+		imgForSwitch.classList.add('active')
+		activeImg.classList.remove('active')
+	}
+
+	if (productListItems.length) {
 		const createSvgBtn = (svgHtml, className = "") => {
 			const b = document.createElement("div");
 			b.classList.add("catalog-item-arrow");
@@ -184,74 +224,10 @@ document.addEventListener('DOMContentLoaded', () => {
 					<path d="M17.5736 11.9949C13.7157 12.3807 6 10.7218 6 1M17.5736 12.0453C13.7157 11.6595 6 13.3184 6 23.0402" stroke="#624C49"/>
 					</svg>
 				`, "right");
-				leftBtn.classList.add('inactive');
-				leftBtn.addEventListener("click", (e) => {
-					e.preventDefault();
-					
-					try {
-						productItemImgListItems.forEach((v, k) => {
-							if (!v.classList.contains('active')) {
-								return;
-							}
-							if (k == 0) {
-								leftBtn.classList.add('inactive');
-								return;
-							}
 
-							v.classList.remove('active');
-							leftBtn.classList.remove('inactive');
-							rightBtn.classList.remove('inactive');
-							productItemImgListItems[k - 1].classList.add('active');
+				leftBtn.addEventListener("click", (e) => switchImageInProductCard(e,productItem, -1));
+				rightBtn.addEventListener("click", (e) => switchImageInProductCard(e,productItem, 1));
 
-							const imgSrc = productItemImgListItems[k - 1].getAttribute('data-img');
-							productItemImg.style.backgroundImage = `url('${imgSrc}')`;
-
-							if (k - 1 == 0) {
-								leftBtn.classList.add('inactive');
-							}
-							throw new Error('Value found');
-						});
-					} catch (e) {
-						if (e.message !== 'Value found') {
-							throw e;
-						}
-					}
-					
-				});
-				rightBtn.addEventListener("click", (e) => {
-					e.preventDefault();
-
-					try {
-						productItemImgListItems.forEach((v, k) => {
-							if (!v.classList.contains('active')) {
-								return;
-							}
-
-							if (k + 1 == productItemImgListItems.length) {
-								rightBtn.classList.add('inactive');
-								return;
-							}
-
-							v.classList.remove('active');
-							leftBtn.classList.remove('inactive');
-							rightBtn.classList.remove('inactive');
-							productItemImgListItems[k + 1].classList.add('active')
-
-							const imgSrc = productItemImgListItems[k + 1].getAttribute('data-img');
-							productItemImg.style.backgroundImage = `url('${imgSrc}')`;
-							if (k + 2 == productItemImgListItems.length) {
-								rightBtn.classList.add('inactive');
-							}
-							throw new Error('Value found');
-						});
-					} catch (e) {
-						if (e.message !== 'Value found') {
-							throw e;
-						}
-					}
-
-					
-				});
 				productItemImg.append(leftBtn);
 				productItemImg.append(rightBtn);
 
