@@ -1,0 +1,21 @@
+$grid-columns: 12;
+$grid-gutter-width: 24px !default;
+
+$max-container-width: 156rem;
+$content-padding: 2rem;
+
+.site-container {
+    width: 100%;
+    max-width: calc($max-container-width + 2 * $content-padding);
+    margin: 0 auto;
+    padding: 0 $content-padding
+}
+
+@supports (width:max(20vw, 100px)) {
+    .site-container {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), $content-padding);
+        padding-right: max(env(safe-area-inset-right, 1.4rem), $content-padding)
+    }
+}
+
+@import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss"

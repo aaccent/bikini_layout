@@ -1,0 +1,29 @@
+@keyframes path {
+    from {
+        stroke-dashoffset: 400;
+        stroke-dasharray: 200;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        stroke-dashoffset: 100;
+        stroke-dasharray: 300;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes fixedHeader {
+    from {
+        top: -200px;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        top: 0;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}

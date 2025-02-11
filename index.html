@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Gulp-starter</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="shortcut icon" href="/favicon.svg" /> -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+    </head>
+    <body>
+
+        <div class="container">
+            <section class="section section-grey">
+                <h1 class="section-title">s</h1>
+
+                <div class="services">
+                    <div class="services-list">
+                        <h2>Страницы:</h2>
+                        <br>
+                        <a href="./main.html" class="services-list__item">
+                            Главная
+                        </a>
+
+                        <a href="./catalog.html" class="services-list__item">
+                            Каталог
+                        </a>
+
+                        <a href="./catalog-item.html" class="services-list__item">
+                            Страница товара
+                        </a>
+
+                        <a href="./featured.html" class="services-list__item">
+                            Избранное
+                        </a>
+
+                        <a href="./brands.html" class="services-list__item">
+                            Бренды
+                        </a>
+
+                        <a href="./collections.html" class="services-list__item">
+                            Коллекции
+                        </a>
+
+                        <a href="./about.html" class="services-list__item">
+                            О компании
+                        </a>
+
+                        <a href="./shops.html" class="services-list__item">
+                            Магазины
+                        </a>
+
+                        <a href="./blog.html" class="services-list__item">
+                            Блог
+                        </a>
+
+                        <a href="./blog-detail.html" class="services-list__item">
+                            Блог статья
+                        </a>
+
+                        <a href="./standart-page.html" class="services-list__item">
+                            Типовая страница
+                        </a>
+
+                        <a href="./404.html" class="services-list__item">
+                            404
+                        </a>
+
+                        <hr>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <style>
+            .services-list__item {
+                display: block;
+                margin-bottom: 20px;
+                font-size: 22px;
+            }
+            .services-list__item::before {
+                bottom: -15px;
+            }
+            .services-list__item .title {
+                font-size: 16px;
+            }
+            .half {
+                color: orange;
+            }
+            ul {
+                padding-left: 20px;
+            }
+            ul li {
+                font-size: 18px;
+                margin: 10px 0;
+                list-style: decimal;
+            }
+            .inactive {
+                opacity: 0.5;
+                pointer-events: none;
+                color: red;
+            }
+        </style>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+        var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       0,          // distance to the element when triggering the animation (default is 0)
+            mobile:       true,       // trigger animations on mobile devices (default is true)
+            live:         true,       // act on asynchronously loaded content (default is true)
+            callback:     function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null // optional scroll container selector, otherwise use window
+        }
+        );
+        wow.init();
+        </script>
+
+    </body>
+</html>

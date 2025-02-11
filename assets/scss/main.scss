@@ -1,0 +1,66 @@
+$font-text: 'Geologica', sans-serif;
+$text-color: rgba(98, 76, 73, 1);
+$primary-color: #60514f;
+$body-color: rgba(243, 238, 231, 1);
+
+body {
+    line-height: 1;
+    background: $body-color;
+    letter-spacing: .02em;
+    font-family: $font-text;
+    color: $text-color;
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 114px;
+    font-size: 16px;
+    &.fixed {
+        overflow: hidden;
+    }
+    @media screen and (max-width: 991px) {
+        padding-top: 60px;
+    }
+    
+}
+
+html {
+    font-size: 10px;
+    font-weight: 300;
+    // font-size: clamp(10px, .6vw, 25px);
+    // text-transform: uppercase;
+    // text-shadow: 0 0 0 #000;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    // scroll-behavior: smooth
+    @media screen and (max-width: 1200px) {
+        font-size: 9px;
+    }
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2, h3, h4, h5 {
+    font-weight: 500;
+}
+
+.opacity-5 {
+    opacity: 0.5 !important;
+}
+
+// @import header
+
+@import "animations";
+@import "grid-system";
+@import "header";
+@import "footer";
+@import "modal";
+@import "catalog";
+@import "content";
+@import "brands";
+@import "collections";
+@import "about";
+@import "shops";
+@import "blog";
+@import "order";

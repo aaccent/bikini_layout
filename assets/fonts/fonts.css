@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Gloria";
+    src: url("./gloriascript.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Forum";
+    src: url("./Forum/Forum-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Geologica";
+    src: url("./Geologica/static/Geologica-Thin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Geologica";
+    src: url("./Geologica/static/Geologica-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
