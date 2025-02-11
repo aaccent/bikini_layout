@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="738b57e6-0da2-4a72-9799-805c8aad205d" name="Changes" comment="fix: circle size">
+    <list default="true" id="738b57e6-0da2-4a72-9799-805c8aad205d" name="Changes" comment="fix: certificate card popup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/catalog.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/catalog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/adaptive-for-2k" />
+        <entry key="$PROJECT_DIR$" value="fix/present-card" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +30,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="fix/shops-page-photo" />
+                    <option name="lastUsedInstant" value="1739280379" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="fix/present-card" />
                     <option name="lastUsedInstant" value="1739272838" />
@@ -60,19 +65,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;fix/present-card&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "fix/shops-page-photo",
+    "ignore_missing_gitignore": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -90,7 +95,7 @@
       <updated>1739260209944</updated>
       <workItem from="1739260211104" duration="11229000" />
       <workItem from="1739271837033" duration="1614000" />
-      <workItem from="1739273484899" duration="1233000" />
+      <workItem from="1739273484899" duration="5971000" />
     </task>
     <task id="LOCAL-00001" summary="feat: adaptive-for-2k">
       <option name="closed" value="true" />
@@ -108,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739272755414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix: certificate card popup">
+      <option name="closed" value="true" />
+      <created>1739274875097</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739274875097</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: adaptive-for-2k" />
     <MESSAGE value="fix: circle size" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: circle size" />
+    <MESSAGE value="fix: certificate card popup" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: certificate card popup" />
   </component>
 </project>
