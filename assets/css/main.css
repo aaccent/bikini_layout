@@ -6998,6 +6998,8 @@ footer .footer-bottom .links a:nth-child(1) {
   transition: opacity 300ms ease-in-out;
   width: 60px;
   height: 60px;
+  justify-content: center;
+  align-items: center;
   display: flex;
 }
 
@@ -7016,11 +7018,16 @@ footer .footer-bottom .links a:nth-child(1) {
   stroke: black;
 }
 .product-list__item .img-list .catalog-item-arrow.left {
-  left: 20px;
+  left: 0;
 }
 .product-list__item .img-list .catalog-item-arrow.right {
-  right: 20px;
-  justify-content: flex-end;
+  right: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .product-list__item .img-list .catalog-item-arrow {
+    opacity: 1;
+  }
 }
 .product-list__item .img-list {
   position: relative;
