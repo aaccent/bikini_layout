@@ -36,13 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	const firstImg = document.querySelector(".catalog-item__img .img");
+	const adaptive = window.matchMedia('(min-width: 1921px)').matches ? 200 : 150
 
 	if (firstImg) {
 		const firstImgCoords = firstImg.getBoundingClientRect();
 
 		const stickyRight = new Sticky('.sticky-right', {
 			className: "test",
-			marginTop: firstImgCoords.height - 150
+			marginTop: firstImgCoords.height - adaptive
 		});
 
 		const stickyCenter = new Sticky('.sticky-center', {
