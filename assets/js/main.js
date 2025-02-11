@@ -284,6 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 900: {
                     items: 3
+                },
+                1921: {
+                    items: 4
                 }
             }
         });
