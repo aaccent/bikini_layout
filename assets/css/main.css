@@ -6992,9 +6992,19 @@ footer .footer-bottom .links a:nth-child(1) {
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 9;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.product-list__item:hover .img-list .catalog-item-arrow {
+  opacity: 1;
 }
 
 .product-list__item .img-list .catalog-item-arrow.inactive {
+  opacity: 0;
+}
+
+.product-list__item:hover .img-list .catalog-item-arrow.inactive {
   opacity: 0.5;
 }
 .product-list__item .img-list .catalog-item-arrow:hover svg path {
