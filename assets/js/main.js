@@ -66,6 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             mini.classList.add('active');
                             mini.style.zIndex = 9;
 
+                            const svg = mini.querySelector('.main-carousel__nav-mini-img svg');
+                            if(window.matchMedia('(min-width: 1921px)').matches) {
+                                svg.style.width = '115px'
+                                svg.style.height = '115px'
+                            }
+
                             const paths = mini.querySelector('.main-carousel__nav-mini-img svg path');
                             anime({
                                 targets: paths,
