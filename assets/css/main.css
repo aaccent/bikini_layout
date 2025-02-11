@@ -8600,7 +8600,7 @@ a.underlined:hover:after {
     border-color: rgba(255, 255, 255, 0.2);
   }
 }
-.gift-price__list-item:hover {
+.gift-price__list-item.active {
   background: rgba(255, 255, 255, 0.15);
   border-color: transparent;
 }
