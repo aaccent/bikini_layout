@@ -9,9 +9,14 @@
     --base-width: 1680
   }
 }
-@media screen and (min-width: 700px) and (max-width: 1199px){
+@media screen and (max-width: 1100px){
   html {
     --base-width: 900
+  }
+}
+@media screen and (max-width: 600px){
+  html {
+    --base-width: 390
   }
 }
 
@@ -23,10 +28,16 @@
 }
 
 .site-container {
-max-width: var(--container-width);
-padding: 0 var(--container-padding);
-width: 100%;
-margin: 0 auto;
+  max-width: var(--container-width);
+  padding: 0 var(--container-padding);
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1100px) {
+  :root {
+    --container-padding: calc(28px + 28 * var(--screen-diff));
+  }
 }
 
 body {
