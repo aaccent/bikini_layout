@@ -29,7 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	document.querySelectorAll(".gift-price__list-item").forEach(item => {
+		/** Отмена вызова попапа при нажатии на номинал*/
+		item.removeAttribute('data-fancybox')
+		item.removeAttribute('data-src')
+
 		item.addEventListener("click", (e) => {
+			const currentActive = document.querySelector(".gift-price__list-item.active")
+			if(currentActive) currentActive.classList.remove('active')
+			e.target.classList.add('active')
+
 			const value = e.target.getAttribute("data-value");
 
 			if (value && value !== "") {
