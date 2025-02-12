@@ -5251,7 +5251,7 @@ footer .footer-bottom .links a:nth-child(1) {
 }
 .fancybox__container .fancybox__content {
   border-radius: 0 8px 8px 8px;
-  padding: 48px;
+  padding: 48px 30px 48px 48px;
 }
 @media screen and (max-width: 991px) {
   .fancybox__container .fancybox__content {
@@ -6162,6 +6162,7 @@ footer .footer-bottom .links a:nth-child(1) {
   height: calc(100vh - 160px);
   overflow-y: scroll;
   overflow-x: visible;
+  padding-right: 18px;
 }
 .fancybox__container #filter .standart-checkbox label {
   display: block;
@@ -6593,7 +6594,7 @@ footer .footer-bottom .links a:nth-child(1) {
   margin-bottom: 0;
 }
 .fancybox__container .cart .modal-flex__top {
-  padding: 48px 48px 0;
+  padding: 48px 35px 0 48px;
 }
 @media screen and (max-width: 991px) {
   .fancybox__container .cart .modal-flex__top {
@@ -6674,6 +6675,7 @@ footer .footer-bottom .links a:nth-child(1) {
   flex-direction: column;
   height: calc(100vh - 350px - 48px - 48px - 3px);
   overflow-y: scroll;
+  padding-right: 12px;
 }
 .fancybox__container .cart-list .cart-list__item {
   margin-right: 7px;
