@@ -504,4 +504,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
     }
+
+    const shopSliderItem = document.querySelectorAll('.shops-slider__item')
+    shopSliderItem.forEach((item) => {
+        const wrapper = document.createElement('div')
+        wrapper.classList.add('shops-slider__item-wrapper')
+        item.prepend(wrapper)
+    })
 });
+
