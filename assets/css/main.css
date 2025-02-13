@@ -8041,6 +8041,7 @@ section {
   .section-title {
     font-size: 26px;
     margin-bottom: 24px;
+    padding: 0 20px;
   }
 }
 
@@ -11025,5 +11026,23 @@ table tr th:first-child {
   .main-categories .site-container {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .find-form .selector-carousel {
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    gap: 10px;
+    padding-left: 20px;
+  }
+
+  .find-form .selector-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .find-wrap {
+    padding-right: 0;
+    padding-left: 0;
+    
   }
 }

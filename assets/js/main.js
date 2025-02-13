@@ -326,6 +326,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     $('.selector-carousel').each(function () {
+
+        if(this.closest('.find-form') && $(window).width() < 991) return
+
         $(this).owlCarousel({
             loop: false,
             margin: 14,
