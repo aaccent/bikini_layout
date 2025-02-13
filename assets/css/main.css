@@ -8059,8 +8059,12 @@ section {
     justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    overflow-y: hidden;
     margin-top: 40px;
+    padding-left: var(--container-padding);
+  }
+
+  .main-categories__list::-webkit-scrollbar {
+    display: none;
   }
 }
 .main-categories__list-item {
@@ -11016,5 +11020,10 @@ table tr th:first-child {
   .gift-wrap {
     border-radius: 4px;
     height: 607px;
+  }
+
+  .main-categories .site-container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
