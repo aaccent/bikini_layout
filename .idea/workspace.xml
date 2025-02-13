@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e310b44-dc8e-433d-8642-0225296eb854" name="Changes" comment="resolve #21">
+    <list default="true" id="2e310b44-dc8e-433d-8642-0225296eb854" name="Changes" comment="resolve #22">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739446153757</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="resolve #22">
+      <option name="closed" value="true" />
+      <created>1739447721698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739447721698</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix: issues" />
     <MESSAGE value="resolve #21" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolve #21" />
+    <MESSAGE value="resolve #22" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolve #22" />
   </component>
 </project>
