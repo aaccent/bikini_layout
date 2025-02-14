@@ -4197,7 +4197,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 10;
   background: rgb(243, 238, 231);
 }
 header.opened {
@@ -4655,6 +4655,7 @@ header .buttons .icon-btn svg.stroke path, header .buttons .icon-btn svg.stroke 
     position: relative;
     top: -900px;
     transition: 0.5s all;
+    z-index: 9;
   }
   .header-mobile-menu.active {
     height: calc(100vh - 66px);
@@ -6095,6 +6096,8 @@ footer .footer-bottom .links a:nth-child(1) {
   .fancybox__container #filter {
     width: 100%;
     height: 85vh;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 }
 .fancybox__container #filter #reset-filter {
@@ -6103,6 +6106,7 @@ footer .footer-bottom .links a:nth-child(1) {
   gap: 4px;
   text-transform: uppercase;
   cursor: pointer;
+  opacity: .7;
 }
 .fancybox__container #filter #reset-filter svg {
   transform: rotate(0deg);
@@ -11122,4 +11126,55 @@ table tr th:first-child {
     padding-right: 28px;
     padding-left: 28px;
   }
+
+  .fancybox__container #filter .js-range-slider__info .from, .fancybox__container #filter .js-range-slider__info .to {
+    font-size: 18px;
+  }
+
+  #filter .item .title::after {
+    rotate: -90deg;
+    top: auto;
+  }
+
+  #filter .item.active {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: #F3EEE7;
+    padding: 32px 28px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  #filter .item.active .title {
+    font-family: "Forum", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .02rem;
+    padding-top: 0;
+    font-size: 18px;
+  }
+
+  #filter .item.active .title::after {
+    display: none;
+  }
+
+  #filter .item.active .title::before {
+    content: '';
+    background-image: url('data:image/svg+xml,<svg width="21" height="12" viewBox="0 0 21 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 5.99802H0.727422C2.52943 6.17823 6.13344 5.40336 6.13344 0.862305M0.727422 6.02155C2.52943 5.84135 6.13344 6.61622 6.13344 11.1573" stroke="%23624C49"/></svg>');
+    width: 20px;
+    height: 9px;
+    display: block;
+    margin-right: 12px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .fancybox__container .modal form {
+    margin-bottom: 0;
+  }
+
+  #filter .modal-flex__top {
+    position: relative;
+  }
+
 }

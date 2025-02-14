@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const mobileSize = window.matchMedia('(max-width:991px)').matches
 
     // console.log(Fancybox);
     Fancybox.bind("[data-fancybox]", {
@@ -149,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cityModal = document.querySelector('.modal.city');
     const chooseCityPopup = document.querySelector('.choose-city-popup__wrap');
-    const mobileSize = window.matchMedia('(max-width:991px)').matches
 
     if (chooseCityPopup) {
         if (mobileSize) document.body.classList.add('fixed')
@@ -518,5 +518,8 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.classList.add('shops-slider__item-wrapper')
         item.prepend(wrapper)
     })
+
+    const resetFiltersButton = document.querySelector('#filter #reset-filter span')
+    if (mobileSize) resetFiltersButton.textContent = 'Сбросить'
 });
 
