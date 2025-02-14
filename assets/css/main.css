@@ -7229,8 +7229,11 @@ footer .footer-bottom .links a:nth-child(1) {
 @media screen and (max-width: 991px) {
   .catalog-categories {
     overflow-x: scroll;
-    padding-left: 60px;
+    overflow-y: hidden;
     margin-bottom: 32px;
+    justify-content: flex-start;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 .catalog-categories__item {
@@ -11104,5 +11107,19 @@ table tr th:first-child {
     inset: 0;
     background-color: hsla(0, 0%, 0%, 0.5);
     z-index: 10;
+  }
+
+  .catalog-categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-container:has(.catalog-categories) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-subtitle:has(+ .catalog-categories) {
+    padding-right: 28px;
+    padding-left: 28px;
   }
 }
