@@ -8691,8 +8691,9 @@ a.underlined:hover:after {
   }
 
   .gift-btn {
-    margin-left: 24px;
-    margin-right: 24px;
+    margin: auto;
+    width: 100%;
+    max-width: 286px;
   }
 }
 .gift-price__list-item:hover {
