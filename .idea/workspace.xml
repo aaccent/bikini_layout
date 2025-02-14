@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e310b44-dc8e-433d-8642-0225296eb854" name="Changes" comment="resolve #22">
+    <list default="true" id="691196bd-e71e-42e8-bef8-e0d8009d5756" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
     </list>
@@ -14,58 +14,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;regina-ms&quot;
-  }
-}</component>
-  <component name="GitToolBoxStore">
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="fix/mobile" />
-                    <option name="lastUsedInstant" value="1739442878" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1739441357" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="fix/shops-page-photo" />
-                    <option name="lastUsedInstant" value="1739429732" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/aaccent/bikini_layout.git&quot;,
-    &quot;accountId&quot;: &quot;72ad8c2c-8359-4a31-8c29-314b65d155ff&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2syZJNSdjMYjPwXPU5MBhTGlrmg" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2t1a985vzTVVEwVRFq9HczBFO3I" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -86,44 +41,20 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19416.2" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2e310b44-dc8e-433d-8642-0225296eb854" name="Changes" comment="" />
-      <created>1739429703655</created>
+      <changelist id="691196bd-e71e-42e8-bef8-e0d8009d5756" name="Changes" comment="" />
+      <created>1739521880497</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739429703655</updated>
+      <updated>1739521880497</updated>
+      <workItem from="1739521882571" duration="711000" />
     </task>
-    <task id="LOCAL-00001" summary="fix: issues">
-      <option name="closed" value="true" />
-      <created>1739440671536</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1739440671536</updated>
-    </task>
-    <task id="LOCAL-00002" summary="resolve #21">
-      <option name="closed" value="true" />
-      <created>1739446153757</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1739446153757</updated>
-    </task>
-    <task id="LOCAL-00003" summary="resolve #22">
-      <option name="closed" value="true" />
-      <created>1739447721698</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1739447721698</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,11 +70,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix: issues" />
-    <MESSAGE value="resolve #21" />
-    <MESSAGE value="resolve #22" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolve #22" />
   </component>
 </project>
