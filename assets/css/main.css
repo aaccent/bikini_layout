@@ -8041,7 +8041,6 @@ section {
   .section-title {
     font-size: 26px;
     margin-bottom: 24px;
-    padding: 0 20px;
   }
 }
 
@@ -8714,6 +8713,8 @@ a.underlined:hover:after {
   .blog-list {
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 .blog-item {
@@ -11050,4 +11051,31 @@ table tr th:first-child {
   section.text-title {
     padding: 80px 0;
   }
+
+  section.blog {
+    padding-bottom: 80px;
+  }
+
+  section.blog a.underlined {
+    display: none;
+  }
+
+  .section-top {
+    margin-bottom: 24px;
+  }
+
+  .blog .section-top {
+    padding-left: 28px;
+  }
+
+  .blog .site-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .blog-list::-webkit-scrollbar {
+    display: none;
+  }
+
+
 }
