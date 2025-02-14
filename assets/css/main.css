@@ -11044,6 +11044,9 @@ table tr th:first-child {
   .find-wrap {
     padding-right: 0;
     padding-left: 0;
-    
+  }
+
+  section.text-title {
+    padding: 80px 0;
   }
 }
