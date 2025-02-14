@@ -148,14 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const cityModal = document.querySelector('.modal.city');
-    const chooseCityPopup = document.querySelector('.choose-city-popup');
+    const chooseCityPopup = document.querySelector('.choose-city-popup__wrap');
+    const mobileSize = window.matchMedia('(max-width:991px)').matches
 
     if (chooseCityPopup) {
+        if (mobileSize) document.body.classList.add('fixed')
         const btns = chooseCityPopup.querySelectorAll('.btn');
 
         btns.forEach(btn => {
             btn.addEventListener('click', () => {
                 chooseCityPopup.classList.add('d-none');
+                document.body.classList.remove('fixed')
             });
         });
     }
@@ -176,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
 
                 chooseCityPopup.classList.add('d-none');
+                document.body.classList.remove('fixed')
                 Fancybox.close();
             });
         });

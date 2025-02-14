@@ -4613,9 +4613,9 @@ header .header-menu > ul > li:hover .services-menu {
 }
 header .buttons {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  column-gap: 10px;
+  justify-content: start;
+  gap: 20px;
 }
 header .buttons .icon-btn {
   margin-right: 18px;
@@ -5071,7 +5071,8 @@ footer .footer-bottom .links a:nth-child(1) {
     background: rgb(243, 238, 231);
   }
   .choose-city-popup .btn {
-    width: auto;
+    width: 160px;
+    justify-content: center;
   }
 }
 .choose-city-popup::before {
@@ -5089,7 +5090,7 @@ footer .footer-bottom .links a:nth-child(1) {
   }
 }
 .choose-city-popup__wrap {
-  position: absolute;
+  position: fixed;
 }
 .choose-city-popup .title {
   margin-bottom: 16px;
@@ -11099,4 +11100,9 @@ table tr th:first-child {
     height: 37px;
   }
 
+  .choose-city-popup__wrap {
+    inset: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    z-index: 10;
+  }
 }
