@@ -10194,7 +10194,6 @@ table tr th:first-child {
 @media screen and (max-width: 991px) {
   .faq .item .title {
     font-size: 16px;
-    padding-right: 64px;
   }
 }
 .faq .item .title:after {
@@ -11011,6 +11010,7 @@ table tr th:first-child {
   .fancybox__container .sizes-table .tabs-content {
     padding-top: 0;
     margin-top: 20px;
+    padding-right: 0;
   }
 
   .fancybox__container .sizes-table .tabs .tabs-item:last-child {
@@ -11128,12 +11128,13 @@ table tr th:first-child {
   }
 
   .fancybox__container #filter .js-range-slider__info .from, .fancybox__container #filter .js-range-slider__info .to {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #filter .item .title::after {
     rotate: -90deg;
     top: auto;
+    transform: translateY(0);
   }
 
   #filter .item.active {
@@ -11141,7 +11142,6 @@ table tr th:first-child {
     inset: 0;
     z-index: 10;
     background-color: #F3EEE7;
-    padding: 32px 28px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
@@ -11175,6 +11175,31 @@ table tr th:first-child {
 
   #filter .modal-flex__top {
     position: relative;
+  }
+
+  .fancybox__container #filter #reset-filter {
+    font-size: 12px;
+  }
+
+  .fancybox__container #filter #reset-filter svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .fancybox__container .filter-item .title {
+    font-size: 16px;
+  }
+
+  .fancybox__container #filter .brands-list {
+    max-height: 400px;
+  }
+
+  .fancybox__container #filter .brands-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .item.active .catalog-menu-hr {
+    display: none;
   }
 
 }
