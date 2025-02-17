@@ -8928,7 +8928,7 @@ a.underlined:hover:after {
   display: inline-flex;
   align-items: flex-end;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
   margin-left: auto;
   margin-right: auto;
   gap: 24px;
@@ -11211,4 +11211,7 @@ table tr th:first-child {
     height: 85vh;
   }
 
+  #sizes-table {
+  top: 86px;
+  }
 }
