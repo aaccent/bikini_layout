@@ -7740,6 +7740,7 @@ footer .footer-bottom .links a:nth-child(1) {
 .catalog-item__info .tabs-content__item .article {
   font-size: 11px;
   margin-bottom: 8px;
+  text-transform: uppercase;
 }
 .catalog-item__info .delivery {
   margin-bottom: 24px;
