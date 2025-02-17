@@ -11202,4 +11202,8 @@ table tr th:first-child {
     display: none;
   }
 
+  .catalog-list.collage .collage-wrap .grid {
+    grid-gap: 32px
+  }
+
 }
