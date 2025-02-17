@@ -4198,14 +4198,19 @@ header {
   top: 0;
   width: 100%;
   z-index: 9;
-  background: rgb(243, 238, 231);
+  border-bottom: 1px solid transparent;
+  background-color: rgb(243, 238, 231);
+  transition-property: background-color, border-bottom-color;
+  transition-duration: 300ms;
+  transition-delay: 400ms;
 }
 header.opened {
-  background: rgb(243, 238, 231) !important;
+  background-color: rgb(243, 238, 231) !important;
 }
 header.colored {
-  background: rgb(243, 238, 231) !important;
+  background-color: rgb(243, 238, 231) !important;
   border-bottom: 1px solid rgba(98, 76, 73, 0.2);
+  transition-delay: 0s;
 }
 header .menu-btn {
   display: flex;
@@ -4294,23 +4299,32 @@ header .header-wrap {
   align-items: stretch;
 }
 header:not(.transparent) {
-  border-bottom: 1px solid rgba(98, 76, 73, 0.2);
+  border-bottom-color: rgba(98, 76, 73, 0.2);
+}
+header :is(.menu-btn svg.open rect, .header-city svg path, .buttons .icon-btn svg.fill path, .buttons .icon-btn svg.stroke path, header.transparent:not(.filled) .buttons .icon-btn svg.stroke circle, .logo svg path) {
+  transition-delay: 0ms;
 }
 header.transparent:not(.filled) {
   color: #fff;
   background: transparent;
+  transition-delay: 400ms !important;
 }
 header.transparent:not(.filled) .menu-btn svg.open rect {
   fill: #fff;
+  transition-delay: 400ms !important;
 }
 header.transparent:not(.filled) .header-city svg path {
   fill: #fff;
+  transition-delay: 400ms !important;
 }
 header.transparent:not(.filled) .buttons .icon-btn svg.fill path {
   fill: #fff;
+  transition-delay: 400ms !important;
 }
 header.transparent:not(.filled) .buttons .icon-btn svg.stroke path, header.transparent:not(.filled) .buttons .icon-btn svg.stroke circle {
   stroke: #fff;
+  transition-delay: 400ms !important;
+
 }
 header.transparent:not(.filled) .logo {
   display: block;
@@ -4318,11 +4332,13 @@ header.transparent:not(.filled) .logo {
   padding: 24px 0 10px;
   transition: 0.1s all;
 }
+
 header.transparent:not(.filled) .logo:hover {
   opacity: 0.5;
 }
 header.transparent:not(.filled) .logo svg path {
   fill: #fff;
+  transition-delay: 400ms !important;
 }
 header .logo {
   display: block;
@@ -4360,6 +4376,10 @@ header .header-city {
   align-items: center;
   cursor: pointer;
   transition: 0.1s all;
+  transition-delay: 400ms;
+}
+header.colored .header-city {
+  transition-delay: 0s;
 }
 @media screen and (max-width: 1400px) {
   header .header-city {
@@ -4394,6 +4414,10 @@ header .header-menu > ul > li {
   opacity: 1;
   transition: 0.1s all;
   padding: 47px 0 48px;
+  transition-delay: 400ms;
+}
+header.colored .header-menu > ul > li {
+  transition-delay: 0s;
 }
 @media screen and (max-width: 1400px) {
   header .header-menu > ul > li {
@@ -4462,8 +4486,9 @@ header .header-menu > ul > li .services-menu {
   position: absolute;
   left: 0;
   width: 100vw;
-  top: 70%;
+  top: calc(100% - 1px);
   transition: 0.3s all;
+  transition-delay: 400ms;
   opacity: 0;
   z-index: 2;
 }
@@ -4610,6 +4635,8 @@ header .header-menu > ul > li:hover .services-menu {
   visibility: visible;
   opacity: 100%;
   top: calc(100% + 1px);
+  pointer-events: auto;
+  transition-delay: 0s;
 }
 header .buttons {
   display: flex;
