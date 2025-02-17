@@ -7415,7 +7415,7 @@ footer .footer-bottom .links a:nth-child(1) {
   opacity: 0.08;
   z-index: 0;
 }
-.catalog-list .product-list__item .cart {
+щз {
   top: 465px;
   z-index: 9;
 }
@@ -7433,6 +7433,7 @@ footer .footer-bottom .links a:nth-child(1) {
   .catalog-list.collage .collage-wrap .grid .product-list__item .cart {
     top: 355px;
     z-index: 9;
+    opacity: 1;
   }
 }
 @media screen and (min-width: 991px) {
@@ -11204,6 +11205,10 @@ table tr th:first-child {
 
   .catalog-list.collage .collage-wrap .grid {
     grid-gap: 32px
+  }
+
+  #item-properties {
+    height: 85vh;
   }
 
 }
