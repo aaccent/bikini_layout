@@ -8996,6 +8996,15 @@ a.underlined:hover:after {
 }
 .tabs-content {
   padding-top: 64px;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 991px) {
+  .tabs-content {
+    gap: 0;
+    flex-wrap: wrap;
+  }
 }
 .tabs-content .not-found {
   width: 100%;
