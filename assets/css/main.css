@@ -6791,6 +6791,7 @@ footer .footer-bottom .links a:nth-child(1) {
 .fancybox__container .cart-list__item-info-bottom .price {
   font-size: 16px;
   line-height: 125%;
+  font-weight: 100;
 }
 .fancybox__container .cart-list__item-info-bottom .price .old {
   opacity: 0.5;
@@ -6999,6 +7000,7 @@ footer .footer-bottom .links a:nth-child(1) {
     bottom: 114px;
     width: 48px;
     height: 48px;
+    opacity: 1;
   }
   .product-list__item .cart svg {
     width: 20px;
@@ -7415,7 +7417,7 @@ footer .footer-bottom .links a:nth-child(1) {
   opacity: 0.08;
   z-index: 0;
 }
-щз {
+.catalog-list .product-list__item .cart {
   top: 465px;
   z-index: 9;
 }
@@ -11001,7 +11003,35 @@ table tr th:first-child {
   }
 }
 
+.catalog-item__img .like {
+  display: none;
+}
+
+#set .like {
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+#set .like svg {
+  width: 18px;
+  height: 18px;
+}
+
+#set .cart {
+  font-size: 14px;
+  letter-spacing: .02rem;
+  line-height: 16.8px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 100;
+  width: fit-content;
+}
+
 @media screen and (max-width: 991px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
   .fancybox__container .sizes-table .tabs {
     margin-right: -15px;
     gap: 23px;
@@ -11170,8 +11200,13 @@ table tr th:first-child {
     background-repeat: no-repeat;
   }
 
+  .fancybox__container .modal {
+    height: calc(100% - 86px);
+  }
+
   .fancybox__container .modal form {
     margin-bottom: 0;
+    height: 100%;
   }
 
   #filter .modal-flex__top {
@@ -11212,10 +11247,144 @@ table tr th:first-child {
   }
 
   #sizes-table {
-  top: 86px;
   }
 
   .fancybox__container .cart .loyalty-club {
+    font-size: 12px;
+  }
+  .catalog-item__img .sticky-js.sticky-right {
+    display: none;
+  }
+
+  .catalog-item__img .img {
+    height: 419px;
+  }
+
+  .catalog-item__images .owl-dots {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    position: absolute;
+    top:433px;
+    translate: -50%;
+    left: 50%;
+  }
+
+  .catalog-item__images .owl-dots .owl-dot {
+    width: 4px;
+    height: 4px;
+    background-color: #9C8D88;
+    border-radius: 100%;
+    opacity: .3;
+  }
+
+  .catalog-item__images .owl-dots .owl-dot.active {
+    background-color: #624C49;
+    opacity: 1;
+  }
+
+  .catalog-item__img .sticky-js.sticky-center {
+    top: 359px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+  }
+
+  #more-photo {
+    width: 100%;
+}
+  #more-photo .more-photo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #more-photo .more-photo-content__wrapper {
+  height: 100%;
+  overflow-y: scroll;
+  }
+
+  #more-photo img {
+    width: 100%;
+    height: 419px;
+    border-radius: 4px;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  .catalog-item__main .buttons .circle-btn.like-btn {
+    display: none;
+  }
+
+  .catalog-item__main .buttons .cart {
+    padding: 20px 32px;
+  }
+
+  .catalog-item__main .brand {
+    font-size: 8px;
+  }
+
+  .catalog-item__main .product-name {
+    font-size: 26px;
+  }
+
+  .catalog-item__main .price span, .catalog-item__main .properties-item {
+    font-size: 16px;
+  }
+
+  .catalog-item__main .size-table {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .catalog-item .catalog-item__main {
+    padding-bottom: 40px;
+  }
+
+  .catalog-item__info .tabs {
+  gap: 24px;
+  overflow: scroll;
+  }
+
+  .sticky {
+    width: 100%;
+  }
+
+  .catalog-item__info p {
+    font-size: 14px;
+    line-height: 17.3px;
+  }
+
+  .fancybox__container .cart-list {
+    padding-right: 0;
+  }
+
+  .fancybox__container .cart-list .cart-list__item {
+    margin-right: 0;
+  }
+
+  .catalog-item__img .like {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 17px;
+    z-index: 10;
+  }
+
+  .fancybox__container .cart-list__item-info-bottom .price {
+    font-size: 14px;
+  }
+
+  #set .like svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .fancybox__container .cart-list__item-info .name {
+    max-width: 186px;
+  }
+
+  #set .cart {
     font-size: 12px;
   }
 }
