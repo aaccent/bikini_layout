@@ -7236,6 +7236,7 @@ footer .footer-bottom .links a:nth-child(1) {
   font-size: 1.6rem;
   line-height: 125%;
   margin-bottom: 20px;
+  opacity: 0.7;
 }
 @media screen and (max-width: 991px) {
   .items-count {
