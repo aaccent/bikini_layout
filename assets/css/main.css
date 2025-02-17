@@ -11214,4 +11214,8 @@ table tr th:first-child {
   #sizes-table {
   top: 86px;
   }
+
+  .fancybox__container .cart .loyalty-club {
+    font-size: 12px;
+  }
 }
