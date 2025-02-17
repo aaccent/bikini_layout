@@ -9031,6 +9031,7 @@ a.underlined:hover:after {
   text-decoration: none;
   font-size: 2rem;
   color: inherit;
+  text-underline-offset: 6px;
 }
 .brands .links a:hover {
   text-decoration: underline;
