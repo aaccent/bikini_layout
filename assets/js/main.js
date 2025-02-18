@@ -408,8 +408,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('.blog-detail__text-slider').each(function () {
         $(this).owlCarousel({
-            loop: true,
+            loop: false,
             items: 1,
+            margin: 14,
             autoWidth: false,
             dots: false,
             nav: true,
@@ -426,6 +427,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </svg>
                 </div>`
             ],
+            responsive: {
+                991: {
+                    margin: 0,
+                    loop: true,
+                }
+            }
         });
     })
 

@@ -10145,6 +10145,20 @@ a.underlined:hover:after {
   right: 40px;
   bottom: 40px;
 }
+
+@media only screen and (max-width: 991px) {
+  .blog-detail__text-slider {
+    margin-bottom: 60px;
+  }
+
+  .blog-detail__text-slider .owl-nav {
+    display: none;
+  }
+
+  .blog-detail__text-slider .owl-stage-outer {
+    overflow: initial;
+  }
+}
 .blog-detail__text-slider .owl-nav .nav-btn {
   padding: 12px;
   border-radius: 100%;
