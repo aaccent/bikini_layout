@@ -126,7 +126,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		smsCodeSendForm.addEventListener("submit", (e) => {
 			e.preventDefault();
 
-			authPhone.textContent = e.target.querySelector('input[name="phone"]').value;
+			const phoneInput = e.target.querySelector(':is(input[name="phone"], input[type="tel"])')
+			const phone = phoneInput.value
+
+			if (phone.replaceAll(/\D/g, '').length < 11) {
+				phoneInput.classList.add('input--error')
+				phoneInput.addEventListener('input', () => phoneInput.classList.remove('input--error'), { once: true })
+				return
+			}
+
+			authPhone.textContent = phone;
 
 			changeStep(2);
 			runSmsTimer();

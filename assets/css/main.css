@@ -61,6 +61,15 @@ body.fixed {
   }
 }
 
+input.input--error {
+  color: #B72D0E;
+  border-bottom-color: #B72D0E !important;
+}
+
+input.input--error::placeholder {
+  color: #B72D0E;
+}
+
 html {
   font-size: 10px;
   font-weight: 300;
@@ -6642,6 +6651,9 @@ footer .footer-bottom .links a:nth-child(1) {
 }
 .fancybox__container .cart .modal-flex__bottom.bordered {
   border-top: 1px solid rgba(96, 81, 79, 0.2);
+}
+.fancybox__container .cart .modal-flex__bottom .btn {
+  width: 100%;
 }
 .fancybox__container .cart .total {
   display: flex;
