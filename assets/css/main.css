@@ -8029,7 +8029,7 @@ section {
 }
 @media screen and (max-width: 991px) {
   section {
-    padding: 40px 0;
+    padding: 0;
     overflow: hidden;
   }
 }
@@ -9229,6 +9229,7 @@ a.underlined:hover:after {
 @media screen and (max-width: 991px) {
   .about-page-title {
     padding-top: 200px;
+    background-image: none;
   }
 }
 .about-page-title.not-found {
@@ -9325,6 +9326,8 @@ a.underlined:hover:after {
 @media screen and (max-width: 991px) {
   .facts-item {
     padding: 40px;
+    width: 270px;
+    height: 364px;
   }
 }
 .facts-item .title {
@@ -9378,8 +9381,7 @@ a.underlined:hover:after {
 }
 @media screen and (max-width: 991px) {
   .features-item {
-    padding: 32px 0;
-    border-bottom: 1px dashed rgba(96, 81, 79, 0.2);
+    padding: 32px 0 0;
   }
 }
 .features-item .title {
@@ -11108,8 +11110,8 @@ table tr th:first-child {
   }
 
   .find-wrap {
-    padding-right: 0;
-    padding-left: 0;
+    padding: 40px;
+    margin-bottom: 80px;
   }
 
   section.text-title {
@@ -11527,5 +11529,64 @@ font-size: 14px;
 
   .collections-list__show-more {
     margin-top: 40px;
+  }
+
+  .about-page-title {
+    position: relative;
+  }
+
+  .about-page-title::after {
+    content: '';
+    position: absolute;
+    background-image: url("../img/about-bg-img.png");
+    width: 309px;
+    height: 323px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 70px;
+    left: 50%;
+    translate: -50%;
+    rotate: -15deg;
+  }
+
+  .features-item:not(:last-child)::after {
+    content: '';
+    border-top: 1px dashed #624C49;
+    opacity: .35;
+    width: 140px;
+    margin-top: 32px;
+  }
+
+  .find-about .find-form {
+    padding: 0;
+  }
+
+  .find-form .section-title {
+    margin-bottom: 32px;
+  }
+
+  .find-about svg {
+    margin-bottom: 32px;
+  }
+
+  .find-about .description {
+    font-size: 14px;
+  }
+
+  .site-container:has(.founder) {
+    margin-top: 80px;
+  }
+
+  .site-container:has(.founder) +.text-title {
+    padding-top: 0;
+    overflow: visible;
+  }
+
+  .founder {
+    overflow: visible;
+  }
+
+  .founder img {
+    width: 240px;
   }
 }
