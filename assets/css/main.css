@@ -5327,6 +5327,12 @@ footer .footer-bottom .links a:nth-child(1) {
   opacity: 0.7;
   margin-bottom: 55px;
 }
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container .auth:has(.auth-step.active :is(input[name="phone"],input[type="tel"])) .modal-subtitle {
+    margin-bottom: 32px;
+  }
+}
 .fancybox__container .modal.with-top-icon {
   padding-top: 74px;
 }
@@ -5368,6 +5374,12 @@ footer .footer-bottom .links a:nth-child(1) {
   .fancybox__container .modal form input[type=text],
   .fancybox__container .modal form input[type=email] {
     font-size: 14px;
+    height: 34px;
+    padding-top: 0;
+  }
+
+  .fancybox__container .auth-step .sms-code input {
+    height: 100px !important;
   }
 }
 .fancybox__container .modal form .form-description {
@@ -5504,6 +5516,10 @@ footer .footer-bottom .links a:nth-child(1) {
   .fancybox__container .sdek-delivery {
     max-height: 580px;
   }
+
+  .fancybox__container .auth:has(.auth-step.active :is(input[name="phone"],input[type="tel"])) {
+    height: fit-content;
+  }
 }
 .fancybox__container .auth .btn,
 .fancybox__container .sdek-delivery .btn {
@@ -5568,6 +5584,12 @@ footer .footer-bottom .links a:nth-child(1) {
   text-transform: uppercase;
   color: #624C49;
   margin-top: 32px;
+}
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container .auth .repeat-code {
+    margin-top: 16px;
+  }
 }
 .fancybox__container .auth .repeat-code .wait,
 .fancybox__container .sdek-delivery .repeat-code .wait {
