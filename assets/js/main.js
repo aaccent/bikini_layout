@@ -521,5 +521,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const resetFiltersButton = document.querySelector('#filter #reset-filter span')
     if (mobileSize) resetFiltersButton.textContent = 'Сбросить'
+
+    const tabContainer = document.querySelector('.tabs')
+    const progress = document.createElement('div')
+    progress.classList.add('progress')
+    tabContainer.append(progress)
+    const moveProgress = (activeTab) => {
+        progress.style.left = activeTab.getBoundingClientRect().left - tabContainer.getBoundingClientRect().left  + 'px'
+        progress.style.width = activeTab.offsetWidth + 'px'
+    }
+
+    const currentActive = tabContainer.querySelector('.tabs-item.active')
+    moveProgress(currentActive)
+
+    const tabs = tabContainer.querySelectorAll('.tabs-item')
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const active = tabContainer.querySelector('.tabs-item.active')
+            if(tab === active) return
+
+            active.classList.remove('active')
+            tab.classList.add('active')
+            moveProgress(tab)
+        })
+    })
+
 });
 
