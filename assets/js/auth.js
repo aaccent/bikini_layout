@@ -83,6 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let isActiveForm = true;
 	for (let i = 0; i < smsCodeInputs.length; i++) {
+		smsCodeInputs[i].addEventListener('keydown', (e) => {
+			if(e.code !== 'Backspace') return
+			// Если значение есть или это последний элемент
+			if (smsCodeInputs[i].value || i === 0) return
+
+			smsCodeInputs[i-1].focus()
+		})
 		smsCodeInputs[i].addEventListener("input", (e) => {
 			if (!e.target.value.match(/[0-9]+/)) {
 				e.target.value = '';
