@@ -9528,6 +9528,8 @@ a.underlined:hover:after {
   .shops-menu .choose-shop-city svg {
     width: 20px;
     height: 20px;
+    position: static;
+    transform: translateY(0);
   }
 }
 .shops-menu .choose-shop-city select {
@@ -9690,7 +9692,7 @@ a.underlined:hover:after {
   .shops-info {
     text-align: center;
     border-radius: 0 0 110px 110px;
-    padding: 32px 70px 64px;
+    padding: 32px 63px 64px;
   }
 }
 .shops-info .address {
@@ -9763,6 +9765,7 @@ a.underlined:hover:after {
     top: unset;
     border-radius: 8px 8px 0 0;
     max-height: 280px;
+    padding: 28px;
   }
 }
 .shops-map .map-modal .close {
@@ -11588,5 +11591,90 @@ font-size: 14px;
 
   .founder img {
     width: 240px;
+  }
+
+  .shops-info .address {
+    font-size: 16px;
+  }
+
+  .shops-info .address-small span {
+    font-size: 12px;
+  }
+  .shops-info .phone {
+    font-size: 14px;
+  }
+
+  .shops-info a {
+    font-size: 12px;
+  }
+
+  section:has(.shops-images) {
+    margin-bottom: 80px;
+    margin-top: 32px;
+  }
+
+  .shops-map .map-modal .address {
+    font-size: 16px;
+  }
+
+  .shops-map .map-modal .address-small span {
+    font-size: 12px;
+  }
+
+  .shops-map .map-modal .phone {
+    font-size: 14px
+  }
+
+  #shops-city {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .select-city__title {
+    font-family: 'Forum', sans-serif;
+    font-size: 26px;
+    line-height: 27.3px;
+    letter-spacing: .02rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #624C49;
+    margin-bottom: 32px;
+  }
+
+  .cities-list {
+    color: #624C49;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: .02rem;
+    line-height: 14.4px;
+  }
+
+  .city-item {
+    display: flex;
+    align-items: center;
+    gap: 10px
+  }
+
+  .city-item::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid #624C494D;
+
+  }
+
+  .city-item:has(input:checked)::before  {
+    border-width: 7px;
+    border-color: #624C49;
+  }
+
+  .city-item input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
   }
 }

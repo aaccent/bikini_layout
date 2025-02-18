@@ -3,7 +3,7 @@
 <!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <!--<![endif]-->
 
 <head>
@@ -892,10 +892,6 @@
             </div>
 
             <div class="choose-shop-city d-lg-block d-none">
-                <!-- <select name="SHOPS_CITY">
-                    <option value="city-1" selected>Екатеринбург</option>
-                    <option value="city-2">Ханты-Мансийск</option>
-                </select> -->
 				<div class="custom-selector">
 					<div class="selected-item" data-value="city-1">Екатеринбург</div>
 					<div class="items-wrap">
@@ -911,7 +907,6 @@
 						</div>
 					</div>
 				</div>
-<!--                <span>Екатеринбург</span>-->
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.0442 18.0001C11.6584 14.1422 13.3173 6.42651 23.0391 6.42651M11.9938 18.0001C12.3796 14.1422 10.7207 6.42651 0.998894 6.42651" stroke="#624C49"/>
                 </svg>
@@ -927,12 +922,10 @@
                 <span>на карте</span>
             </div>
 
-            <div class="choose-shop-city">
-                <select name="SHOPS_CITY">
-                    <option value="city-1" selected>Екатеринбург</option>
-                    <option value="city-2">Ханты-Мансийск</option>
-                </select>
-                <!--                <span>Екатеринбург</span>-->
+            <div class="choose-shop-city" data-fancybox data-src="#shops-city">
+                <div class="shops-city">
+					<span>Екатеринбург</span>
+                </div>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.0442 18.0001C11.6584 14.1422 13.3173 6.42651 23.0391 6.42651M11.9938 18.0001C12.3796 14.1422 10.7207 6.42651 0.998894 6.42651" stroke="#624C49"/>
                 </svg>
@@ -1263,6 +1256,20 @@
 </footer>
 
 <div class="modals">
+	<div class="select-city" id="shops-city">
+		<div class="select-city__title">город</div>
+			<div class="cities-list">
+				<label class="city-item">
+					<input type="radio" name="city" value="Екатеринбург">
+					Екатеринбург
+				</label>
+				<label class="city-item" >
+					<input type="radio" name="city" value="Ханты-мансийск">
+					Ханты-мансийск
+				</label>
+			</div>
+	</div>
+
 	<div class="modal city" id="choose-city">
 		<!-- <div class="modal-title">Выберите город</div> -->
 
