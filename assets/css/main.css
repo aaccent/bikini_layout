@@ -68,6 +68,7 @@ html {
 @media screen and (max-width: 1200px) {
   html {
     font-size: 9px;
+    overflow: scroll;
   }
 }
 
@@ -8957,6 +8958,7 @@ a.underlined:hover:after {
   .tabs-item {
     white-space: nowrap;
     font-size: 14px;
+    gap: 4px;
   }
 }
 .tabs-item:after {
@@ -8992,6 +8994,9 @@ a.underlined:hover:after {
 }
 .tabs-content {
   padding-top: 64px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 .tabs-content .not-found {
   width: 100%;
@@ -9011,7 +9016,13 @@ a.underlined:hover:after {
 }
 @media screen and (max-width: 991px) {
   .brands .links {
-    display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: sticky;
+  top: 214px;
+  gap: 2px;
+  height: fit-content;
   }
 }
 .brands .links a {
@@ -9030,17 +9041,22 @@ a.underlined:hover:after {
 }
 @media screen and (max-width: 991px) {
   .brands form {
-    position: fixed;
+    position: sticky;
     left: 0;
     right: 0;
-    top: calc(100% - 100px);
+    top: auto;
+    bottom: 0;
+    background-color: #F3EEE7;
+    padding: 28px;
+    z-index: 1;
   }
 }
 .brands form:after {
   content: "";
   position: absolute;
-  right: 28px;
-  top: 28px;
+  right: 56px;
+  top: 50%;
+  translate: 0 -50%;
   pointer-events: none;
   background-image: url('data:image/svg+xml,<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11.0619" cy="9.06194" r="7.06194" stroke="%23624C49" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 21L16.625 14.3594" stroke="%23624C49" stroke-width="0.9" stroke-linecap="square" stroke-linejoin="round"/></svg>');
   width: 25px;
@@ -11030,6 +11046,10 @@ table tr th:first-child {
   width: fit-content;
 }
 
+.brands form.mobile {
+  display: none;
+}
+
 @media screen and (max-width: 991px) {
   ::-webkit-scrollbar {
     display: none;
@@ -11401,5 +11421,86 @@ table tr th:first-child {
   padding-right: 28px;
   }
 
-  
+  .brands .tabs-wrap {
+    display: block;
+    overflow: scroll;
+  }
+
+  .brands .catalog-menu-hr {
+    display: none;
+  }
+
+  .brands .tabs {
+    gap: 22px;
+    margin: 0 28px 32px;
+  }
+
+  .brands .tabs-content {
+    padding-top: 0;
+    flex-direction: column-reverse;
+  }
+
+  .brands-list ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .brands-list ul li a {
+    display: flex;
+  }
+
+  .brands-list ul li a:before {
+    position: static;
+    opacity: 1;
+  }
+
+  .brands-list__letter {
+    margin-bottom: 20px;
+  }
+
+  .brands form input {
+padding: 21px 28px !important;
+font-size: 14px;
+  }
+
+  .brands .links a {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: .02rem;
+  }
+
+  .brands {
+    position: relative;
+  }
+
+  .brand-content-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 28px;
+  }
+
+  .brands form.mobile {
+    display: block;
+    padding: 28px;
+  }
+  .brands form.mobile:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    top:0;
+    width: 100vw;
+    background-color: #624C4933;
+    left: 50%;
+    translate: -50%;
+  }
+
+  .brands form.desktop {
+    display: none;
+  }
+
+  .site-container:has(.brands) {
+    padding: 0;
+  }
 }
