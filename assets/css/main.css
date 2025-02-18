@@ -11503,4 +11503,29 @@ font-size: 14px;
   .site-container:has(.brands) {
     padding: 0;
   }
+
+  .collections-page {
+    padding: 0;
+  }
+
+  .collections-page .tabs-wrap {
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+
+  .collections-page .tabs-wrap .tabs {
+    margin: 16px 28px 38px;
+  }
+
+  .collections-page +.site-container .catalog-menu-hr {
+    display: none;
+  }
+
+  .collections-list {
+    padding: 0;
+  }
+
+  .collections-list__show-more {
+    margin-top: 40px;
+  }
 }
