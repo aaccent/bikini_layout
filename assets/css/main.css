@@ -4238,6 +4238,12 @@ header.fixed {
 header.fixed:not(.transparent) {
   background: #FFFFFF;
 }
+
+@media only screen and (max-width: 991px) {
+  header.fixed.opened:not(.transparent) {
+    padding-bottom: 47px;
+  }
+}
 header.fixed .header-city {
   display: none !important;
 }
@@ -4663,7 +4669,6 @@ header .buttons .icon-btn svg.stroke path, header .buttons .icon-btn svg.stroke 
     opacity: 1;
     visibility: visible;
     top: 0;
-    padding-bottom: 47px;
   }
   .header-mobile-menu__nav .back-btn {
     position: relative;
@@ -4694,7 +4699,8 @@ header .buttons .icon-btn svg.stroke path, header .buttons .icon-btn svg.stroke 
     display: flex;
     overflow-x: scroll;
     grid-gap: 16px;
-    margin-top: 32px;
+    margin: 32px -28px 0;
+    padding: 0 28px;
   }
   .header-mobile-menu__nav nav .media-cards__item {
     min-width: 280px;
@@ -4812,6 +4818,7 @@ header .buttons .icon-btn svg.stroke path, header .buttons .icon-btn svg.stroke 
     display: flex;
     align-items: center;
     grid-gap: 8px;
+    margin-bottom: 47px;
   }
   .header-mobile-menu__bottom .socials a {
     text-decoration: none;
@@ -5073,7 +5080,7 @@ footer .footer-bottom .links a:nth-child(1) {
     background: rgb(243, 238, 231);
   }
   .choose-city-popup .btn {
-    width: 160px;
+    width: 100%;
     justify-content: center;
   }
 }
@@ -5102,6 +5109,17 @@ footer .footer-bottom .links a:nth-child(1) {
   font-size: 1.1rem;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 991px) {
+  .choose-city-popup .title {
+    margin-bottom: 20px;
+  }
+
+  .choose-city-popup .buttons .empty {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .add-product-popup {
@@ -6101,6 +6119,7 @@ footer .footer-bottom .links a:nth-child(1) {
     height: 85vh;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    padding-bottom: 0;
   }
 }
 .fancybox__container #filter #reset-filter {
@@ -6174,6 +6193,12 @@ footer .footer-bottom .links a:nth-child(1) {
   overflow-y: scroll;
   overflow-x: visible;
   padding-right: 18px;
+}
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container #filter .filter-form-modal {
+    height: calc(100vh - 130px);
+  }
 }
 .fancybox__container #filter .standart-checkbox label {
   display: block;
@@ -6472,6 +6497,7 @@ footer .footer-bottom .links a:nth-child(1) {
   margin-bottom: 32px;
   font-size: 16px;
   font-weight: 100;
+  width: 100%;
 }
 .fancybox__container .sizes-table .tabs-content__item:not(.active) {
   display: none;
@@ -6518,6 +6544,14 @@ footer .footer-bottom .links a:nth-child(1) {
 .fancybox__container .filter button.btn {
   width: 100%;
   justify-content: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container .filter button.btn {
+    margin: -32px 0 28px;
+    z-index: 10;
+    position: relative;
+  }
 }
 .fancybox__container .filter-item .title {
   font-weight: 300;
@@ -8029,7 +8063,7 @@ section {
 }
 @media screen and (max-width: 991px) {
   section {
-    padding: 0;
+    padding: 40px 0;
     overflow: hidden;
   }
 }
@@ -8333,7 +8367,7 @@ section {
 }
 @media screen and (max-width: 991px) {
   .find-form__link {
-    margin-bottom: 40px;
+    margin-bottom: 8px;
   }
 }
 .find-form__link:hover {
@@ -11049,6 +11083,11 @@ table tr th:first-child {
   display: none;
 }
 
+section:has(.shops-images) {
+  padding-top: 0;
+  margin-top: 56px;
+}
+
 @media screen and (max-width: 991px) {
   ::-webkit-scrollbar {
     display: none;
@@ -11096,10 +11135,11 @@ table tr th:first-child {
 
   .find-form .selector-carousel {
     display: flex;
-    width: 100%;
+    width: calc(100% + 32px * 2);
     overflow: scroll;
     gap: 10px;
-    padding-left: 20px;
+    padding: 0 32px;
+    margin: 0 -32px 32px;
   }
 
   .find-form .selector-carousel::-webkit-scrollbar {
@@ -11107,7 +11147,7 @@ table tr th:first-child {
   }
 
   .find-wrap {
-    padding: 40px;
+    padding: 40px 32px;
     margin-bottom: 80px;
   }
 
@@ -11672,7 +11712,7 @@ font-size: 14px;
     opacity: 0;
   }
 
-  .site-container .catalog-menu-hr:only-child {
+  .site-container:not(:has(+ .site-container .shops-images)) .catalog-menu-hr:only-child {
     display: none;
   }
 
@@ -11690,5 +11730,16 @@ font-size: 14px;
   .blog-page .collections-list__item {
     margin-bottom: 32px;
   }
-  
+}
+
+section.text-title:has( + section.find-about),
+.about-page-title ~ div:has(section.features) section,
+.about-page-title ~ section.facts,
+section.founder {
+  padding: 0;
+}
+
+section.text-title + section.find-about {
+  margin-top: 80px;
+  padding: 0;
 }
