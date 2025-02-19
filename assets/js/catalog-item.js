@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+	const mobileSize = window.matchMedia('(max-width:991px)').matches
 	const tabs = document.querySelectorAll(".tabs");
 
 	if (tabs.length) {
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const firstImg = document.querySelector(".catalog-item__img .img");
 	const adaptive = window.matchMedia('(min-width: 1921px)').matches ? 200 : 150
 
-	if (firstImg) {
+	if (firstImg && !mobileSize) {
 		const firstImgCoords = firstImg.getBoundingClientRect();
 
 		const stickyRight = new Sticky('.sticky-right', {
@@ -166,5 +167,31 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		}
 	}
+
+	void function () {
+		if(!mobileSize) return
+		const itemImages = document.querySelectorAll('.catalog-item__img .img')
+		const owlCarousel = document.createElement('div')
+		owlCarousel.classList.add('owl-carousel','catalog-item__images')
+		itemImages.forEach((item) => owlCarousel.append(item))
+		document.querySelector('.catalog-item__img').append(owlCarousel)
+
+			$(owlCarousel).owlCarousel({
+				items: 1,
+			});
+
+	}()
+
+
+
+	void function() {
+		const imagesPopup = document.querySelector('#more-photo .more-photo-content')
+		const images = document.querySelectorAll('.catalog-item__img .img img')
+		images.forEach((image) => imagesPopup.append(image.cloneNode(true)))
+	}()
+
+	const cartButtonText = document.querySelector('.catalog-item__main .buttons .cart span')
+	if(mobileSize) cartButtonText.textContent = 'добавить в корзину'
+
 });
 
