@@ -4650,9 +4650,10 @@ header .header-menu > ul > li:hover > ul {
 header .header-menu > ul > li:hover .services-menu {
   visibility: visible;
   opacity: 100%;
-  top: calc(100% + 1px);
+  top: calc(100% - 1px);
   pointer-events: auto;
   transition-delay: 0s;
+  border-top: 1px solid rgba(98, 76, 73, 0.2);
 }
 header .buttons {
   display: flex;
