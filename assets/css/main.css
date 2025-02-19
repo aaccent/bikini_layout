@@ -7611,9 +7611,10 @@ footer .footer-bottom .links a:nth-child(1) {
     height: 419px;
   }
   .catalog-list.collage .collage-wrap .grid .product-list__item .cart {
-    top: 355px;
+    top: unset;
     z-index: 9;
     opacity: 1;
+    bottom: 16px;
   }
 }
 @media screen and (min-width: 991px) {
