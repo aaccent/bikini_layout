@@ -5448,6 +5448,10 @@ footer .footer-bottom .links a:nth-child(1) {
   .fancybox__container .auth-step .sms-code input {
     height: 100px !important;
   }
+
+  .modal.search input {
+    height: 60px !important;
+  }
 }
 .fancybox__container .modal form .form-description {
   font-weight: 100;
@@ -5913,7 +5917,7 @@ footer .footer-bottom .links a:nth-child(1) {
     font-size: 16px;
   }
 
-  .fancybox__container .f-button.is-close-btn {
+  .fancybox__container .subscription .f-button.is-close-btn {
     display: none;
   }
 }
@@ -6420,9 +6424,12 @@ footer .footer-bottom .links a:nth-child(1) {
 
 @media only screen and (max-width: 991px) {
   .fancybox__container #filter .brands .tabs-content input {
-height: 60px;
-margin-bottom: 24px;
-}
+
+height: 60px;
+
+margin-bottom: 24px;
+
+}
 }
 .fancybox__container #filter .brands-list {
   max-height: 200px;
