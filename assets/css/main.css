@@ -5080,7 +5080,7 @@ footer .footer-bottom .links a:nth-child(1) {
     background: rgb(243, 238, 231);
   }
   .choose-city-popup .btn {
-    width: 160px;
+    width: 100%;
     justify-content: center;
   }
 }
@@ -5109,6 +5109,17 @@ footer .footer-bottom .links a:nth-child(1) {
   font-size: 1.1rem;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 991px) {
+  .choose-city-popup .title {
+    margin-bottom: 20px;
+  }
+
+  .choose-city-popup .buttons .empty {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .add-product-popup {
