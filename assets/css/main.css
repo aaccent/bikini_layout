@@ -4661,7 +4661,7 @@ header .buttons {
   gap: 20px;
 }
 header .buttons .icon-btn {
-  margin-right: 10px;
+  margin-right: 0;
 }
 @media screen and (max-width: 1400px) {
   header .buttons .icon-btn {
