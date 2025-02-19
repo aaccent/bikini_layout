@@ -11083,6 +11083,11 @@ table tr th:first-child {
   display: none;
 }
 
+section:has(.shops-images) {
+  padding-top: 0;
+  margin-top: 56px;
+}
+
 @media screen and (max-width: 991px) {
   ::-webkit-scrollbar {
     display: none;
@@ -11707,7 +11712,7 @@ font-size: 14px;
     opacity: 0;
   }
 
-  .site-container .catalog-menu-hr:only-child {
+  .site-container:not(:has(+ .site-container .shops-images)) .catalog-menu-hr:only-child {
     display: none;
   }
 
