@@ -6119,6 +6119,7 @@ footer .footer-bottom .links a:nth-child(1) {
     height: 85vh;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    padding-bottom: 0;
   }
 }
 .fancybox__container #filter #reset-filter {
@@ -6192,6 +6193,12 @@ footer .footer-bottom .links a:nth-child(1) {
   overflow-y: scroll;
   overflow-x: visible;
   padding-right: 18px;
+}
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container #filter .filter-form-modal {
+    height: calc(100vh - 130px);
+  }
 }
 .fancybox__container #filter .standart-checkbox label {
   display: block;
@@ -6536,6 +6543,14 @@ footer .footer-bottom .links a:nth-child(1) {
 .fancybox__container .filter button.btn {
   width: 100%;
   justify-content: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container .filter button.btn {
+    margin: -32px 0 28px;
+    z-index: 10;
+    position: relative;
+  }
 }
 .fancybox__container .filter-item .title {
   font-weight: 300;
