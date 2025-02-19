@@ -6497,6 +6497,7 @@ footer .footer-bottom .links a:nth-child(1) {
   margin-bottom: 32px;
   font-size: 16px;
   font-weight: 100;
+  width: 100%;
 }
 .fancybox__container .sizes-table .tabs-content__item:not(.active) {
   display: none;
