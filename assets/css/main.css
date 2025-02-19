@@ -8029,7 +8029,7 @@ section {
 }
 @media screen and (max-width: 991px) {
   section {
-    padding: 0;
+    padding: 40px 0;
     overflow: hidden;
   }
 }
