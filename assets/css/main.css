@@ -7160,7 +7160,7 @@ footer .footer-bottom .links a:nth-child(1) {
   .product-list__item .cart {
     right: 16px;
     top: unset;
-    bottom: 114px;
+    bottom: 16px;
     width: 48px;
     height: 48px;
     opacity: 1;
@@ -7248,7 +7248,7 @@ footer .footer-bottom .links a:nth-child(1) {
   background-repeat: no-repeat;
 }
 .product-list__item .img-list__item {
-  width: 33%;
+  width: 100%;
   height: 100%;
 }
 .product-list__item img {
@@ -11468,6 +11468,12 @@ section:has(.shops-images) {
 
   .item.active .catalog-menu-hr {
     display: none;
+  }
+
+  .catalog-list.collage .collage-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 
   .catalog-list.collage .collage-wrap .grid {
