@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const mobileSize = window.matchMedia('(max-width:991px)').matches
 
     // console.log(Fancybox);
     Fancybox.bind("[data-fancybox]", {
@@ -148,14 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const cityModal = document.querySelector('.modal.city');
-    const chooseCityPopup = document.querySelector('.choose-city-popup');
+    const chooseCityPopup = document.querySelector('.choose-city-popup__wrap');
 
     if (chooseCityPopup) {
+        if (mobileSize) document.body.classList.add('fixed')
         const btns = chooseCityPopup.querySelectorAll('.btn');
 
         btns.forEach(btn => {
             btn.addEventListener('click', () => {
                 chooseCityPopup.classList.add('d-none');
+                document.body.classList.remove('fixed')
             });
         });
     }
@@ -176,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
 
                 chooseCityPopup.classList.add('d-none');
+                document.body.classList.remove('fixed')
                 Fancybox.close();
             });
         });
@@ -326,6 +330,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     $('.selector-carousel').each(function () {
+
+        if(this.closest('.find-form') && $(window).width() < 991) return
+
         $(this).owlCarousel({
             loop: false,
             margin: 14,
@@ -511,5 +518,33 @@ document.addEventListener('DOMContentLoaded', () => {
         wrapper.classList.add('shops-slider__item-wrapper')
         item.prepend(wrapper)
     })
+
+    const resetFiltersButton = document.querySelector('#filter #reset-filter span')
+    if (mobileSize) resetFiltersButton.textContent = 'Сбросить'
+
+    const tabContainer = document.querySelector('.tabs')
+    const progress = document.createElement('div')
+    progress.classList.add('progress')
+    tabContainer.append(progress)
+    const moveProgress = (activeTab) => {
+        progress.style.left = activeTab.getBoundingClientRect().left - tabContainer.getBoundingClientRect().left  + 'px'
+        progress.style.width = activeTab.offsetWidth + 'px'
+    }
+
+    const currentActive = tabContainer.querySelector('.tabs-item.active')
+    moveProgress(currentActive)
+
+    const tabs = tabContainer.querySelectorAll('.tabs-item')
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const active = tabContainer.querySelector('.tabs-item.active')
+            if(tab === active) return
+
+            active.classList.remove('active')
+            tab.classList.add('active')
+            moveProgress(tab)
+        })
+    })
+
 });
 
