@@ -41,6 +41,7 @@
 }
 
 body {
+  overflow-x: clip;
   line-height: 1;
   background: rgb(243, 238, 231);
   letter-spacing: 0.02em;
@@ -71,9 +72,11 @@ input.input--error::placeholder {
 }
 
 html {
+  overflow-x: clip;
   font-size: 10px;
   font-weight: 300;
 }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 9px;
