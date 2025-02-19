@@ -8333,7 +8333,7 @@ section {
 }
 @media screen and (max-width: 991px) {
   .find-form__link {
-    margin-bottom: 40px;
+    margin-bottom: 8px;
   }
 }
 .find-form__link:hover {
@@ -11096,10 +11096,11 @@ table tr th:first-child {
 
   .find-form .selector-carousel {
     display: flex;
-    width: 100%;
+    width: calc(100% + 32px * 2);
     overflow: scroll;
     gap: 10px;
-    padding-left: 20px;
+    padding: 0 32px;
+    margin: 0 -32px 32px;
   }
 
   .find-form .selector-carousel::-webkit-scrollbar {
@@ -11107,7 +11108,7 @@ table tr th:first-child {
   }
 
   .find-wrap {
-    padding: 40px;
+    padding: 40px 32px;
     margin-bottom: 80px;
   }
 
