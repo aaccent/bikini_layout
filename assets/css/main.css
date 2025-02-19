@@ -6399,6 +6399,13 @@ footer .footer-bottom .links a:nth-child(1) {
   width: 25px;
   height: 24px;
 }
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container #filter .brands .tabs-content:after {
+    top: 18px;
+    right: 28px;
+  }
+}
 .fancybox__container #filter .brands .tabs-content input {
   width: 100%;
   padding: 17px 20px !important;
@@ -6409,6 +6416,13 @@ footer .footer-bottom .links a:nth-child(1) {
   line-height: 120%;
   letter-spacing: 0.01em;
   background: transparent;
+}
+
+@media only screen and (max-width: 991px) {
+  .fancybox__container #filter .brands .tabs-content input {
+height: 60px;
+margin-bottom: 24px;
+}
 }
 .fancybox__container #filter .brands-list {
   max-height: 200px;
