@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mobileSize = window.matchMedia('(max-width:991px)').matches
 
-    // console.log(Fancybox);
     Fancybox.bind("[data-fancybox]", {
         autoFocus: false,
         trapFocus: false,
@@ -15,9 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
     });
-    // $('[data-fancybox]').fancybox({
-    //     autoFocus: false
-    // });
+
+    /**
+     * Добавляет обработчик по нажатию на элементы `elements`.
+     * Обработчик вызывает попап "подписаться на размер".
+     * @param {NodeList | HTMLElement[]} elements
+     */
+    function bindSizeSubscriptionPopup(elements) {
+        elements.forEach((element) => {
+            element.addEventListener('click',() => {
+                Fancybox.close()
+
+                new Fancybox(
+                  [{src: '#size-subscription'}],
+                  {
+                    autoFocus: false,
+                    trapFocus: false,
+                    placeFocusBack: false,
+                    dragToClose: false,
+                })
+            })
+        })
+    }
+
+    const disabledSizeRadio = document.querySelectorAll('.custom-radio label:has( input[type="radio"][name="SIZE"][disabled])')
+    bindSizeSubscriptionPopup(disabledSizeRadio)
+
     const mobileMenuBtn = document.querySelector('#mobile-menu-btn')
     const bodyEl = document.querySelector('body');
     const headerMobileMenu = document.querySelector('.header-mobile-menu');
@@ -415,8 +437,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('.blog-detail__text-slider').each(function () {
         $(this).owlCarousel({
-            loop: true,
+            loop: false,
             items: 1,
+            margin: 14,
             autoWidth: false,
             dots: false,
             nav: true,
@@ -433,6 +456,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     </svg>
                 </div>`
             ],
+            responsive: {
+                991: {
+                    margin: 0,
+                    loop: true,
+                }
+            }
         });
     })
 
@@ -548,3 +577,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+const subscriptionForm = document.querySelector('.size-subscription form')
+const subscriptionSubmitButton = subscriptionForm.querySelector(':is(button[type="submit"], button:not([type="button"]))')
+
+function checkSubscriptionForm() {
+    if (!subscriptionForm || !subscriptionSubmitButton) return
+
+    const requiredInputs = subscriptionForm.querySelectorAll('input[required]')
+    const formData = new FormData(subscriptionForm)
+
+    let disable = false
+    for (const input of requiredInputs) {
+        if (formData.get(input.name)) continue
+
+        disable = true
+        break
+    }
+
+    subscriptionSubmitButton.disabled = disable
+}
+checkSubscriptionForm()
+subscriptionForm.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', checkSubscriptionForm)
+})
