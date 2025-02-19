@@ -9150,7 +9150,7 @@ a.underlined:hover:after {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 25px;
+  gap: 45px;
   flex-wrap: nowrap;
 }
 
