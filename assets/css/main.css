@@ -10516,7 +10516,7 @@ table tr th:first-child {
 .cart-order__wrap {
   position: relative;
   overflow: scroll;
-  height: 100vh;
+  height: 100%;
   padding-top: 80px;
 }
 .cart-order__top {
@@ -10547,6 +10547,7 @@ table tr th:first-child {
 }
 .cart-order__info {
   padding-top: 60px;
+  padding-bottom: 40px;
   overflow-y: scroll;
 }
 .cart-order__info .submit-btn {
