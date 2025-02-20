@@ -250,6 +250,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			this.complete = false;
 			handler(this);
 			this.changeStepHandler();
+
+			// TODO: Убрать во время сборки
+			// Временно для демонстрационных целей.
+			if (this.element) {
+				this.element.querySelector('.order-steps__step-top')?.addEventListener('click', () => {
+					if (this.element.classList.contains('active')) {
+						this.close()
+					} else {
+						this.open()
+					}
+				})
+			}
 		}
 
 		linkNextStep(step) {
