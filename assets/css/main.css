@@ -7194,6 +7194,46 @@ margin-bottom: 24px;
     width: 48px;
     height: 38px;
   }
+  .catalog-list.cards .product-list__item .tag {
+    width: 41px;
+    height: 33px;
+    padding: 3px 3px 6px 6px;
+    left: 12px;
+    top: 14px;
+  }
+  .catalog-list.cards .product-list__item .like {
+    top: 15px;
+  }
+  .catalog-list.cards .product-list__item .like svg {
+    width: 22px;
+    height: 22px;
+  }
+  .catalog-list.cards .product-list__item .title {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 100;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .catalog-list.cards .product-list__item .section {
+    margin-bottom: 6px;
+    font-size: 8px;
+    line-height: 1.2;
+  }
+  .catalog-list.cards .product-list__item .price {
+    display: flex;
+    gap: 6px;
+  }
+  .catalog-list.cards .product-list__item .price span {
+    font-size: 12px;
+    margin-right: 0;
+  }
+  .catalog-list.cards .product-list__item .img-list .catalog-item-arrow {
+    width: 35px;
+  }
 }
 .product-list__item .tag.primary {
   background: url('data:image/svg+xml,<svg width="52" height="36" viewBox="0 0 52 36" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="26.3507" cy="17.0413" rx="26.3507" ry="17.0413" transform="matrix(-0.968126 0.250464 0.267412 0.963582 46.9858 -5)" fill="%239C8D88"/></svg>');
@@ -7332,6 +7372,7 @@ margin-bottom: 24px;
 }
 .product-list__item .section span {
   margin-right: 6px;
+  opacity: .5;
 }
 .product-list__item .section .colors {
   display: flex;
@@ -7614,14 +7655,18 @@ margin-bottom: 24px;
 @media screen and (max-width: 991px) {
   .catalog-list.cards {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px 10px;
   }
   .catalog-list.cards .product-list__item.slider .img {
     height: 210px;
+    margin-bottom: 12px;
   }
   .catalog-list.cards .product-list__item .cart {
     width: 40px;
     height: 40px;
-    top: 150px;
+    top: unset;
+    bottom: 12px;
+    right: 12px;
     z-index: 1;
   }
 }
