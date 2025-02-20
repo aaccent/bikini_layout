@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new (class MobileMenu {
         constructor() {
             this.navElements = document.querySelectorAll('.header-mobile-menu__nav nav');
+            this.withLastLevelElements = document.querySelectorAll('.header-mobile-menu__nav nav li:has(ul)')
             this.backBtn = document.querySelector('#header-mobile-menu__nav-back-btn');
             this.mainNav = "main";
             this.nav = [];
@@ -17,6 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.setActive(nav.id)
                 }
             });
+
+            this.withLastLevelElements.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('active')
+                })
+            })
 
             this.events();
         }
