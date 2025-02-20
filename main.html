@@ -2734,6 +2734,45 @@
 		</form>
 	</div>
 
+  <div class="modal size-subscription" id="size-subscription">
+    <form action="#">
+      <div class="modal-flex">
+        <div class="modal-flex__top">
+          <div class="cart-top">
+            <div class="modal-title">подписаться на размер</div>
+          </div>
+        </div>
+        <div class="modal-flex__content">
+          <p class="size-subscription__text">
+            Мы обязательно напишем вам, когда нужный размер появится в наличии
+          </p>
+
+          <div class="text full standart-checkbox">
+            <label>
+              <input type="checkbox" name="SIZE[]" value="85А (чашка а)" required>
+              <span>85А (чашка а)</span>
+            </label>
+            <label>
+              <input type="checkbox" name="SIZE[]" value="90А (чашка а)" required>
+              <span>90А (чашка а)</span>
+            </label>
+          </div>
+
+          <input type="email" name="email" placeholder="Ваш e-mail*" required />
+
+          <button class="btn btn-full btn-primary" type="submit" data-fancybox data-src="#subscription">
+            <span>Подписаться</span>
+            <svg width="78" height="40" viewBox="0 0 78 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M0.5 19.9903H77.5358C70.6882 20.6751 56.9929 17.7306 56.9929 0.474609M77.5358 20.0797C70.6882 19.395 56.9929 22.3395 56.9929 39.5955"
+                  stroke="white" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
 	<div class="modal filter size sizes-table" id="filter">
 		<form action="#" class="filter-form-modal">
 			<div class="modal-flex">
@@ -3362,25 +3401,17 @@
 		<div class="btn btn-primary" data-fancybox-close>Хорошо</div>
 	</div>
 
-	<div class="modal with-top-icon subscription" id="subscription">
-		<div class="top-icon">
-			<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<g clip-path="url(#clip0_872_8409)">
-					<path fill-rule="evenodd" clip-rule="evenodd"
-						  d="M14.344 22.668L20.004 26.538L25.46 22.774L37.69 34.84C37.368 34.944 37.024 35 36.666 35H3.334C2.894 35 2.474 34.914 2.088 34.76L14.344 22.668ZM40 12.752V31.666C40 32.16 39.892 32.628 39.7 33.05L27.712 21.222L40 12.752ZM1.8872e-06 12.858L12.084 21.122L0.212002 32.838C0.0713934 32.4633 -0.000424467 32.0662 1.8872e-06 31.666V12.858ZM36.666 5C38.506 5 40 6.492 40 8.334V9.506L19.996 23.296L1.8872e-06 9.62V8.334C1.8872e-06 6.494 1.492 5 3.334 5H36.666Z"
-						  fill="#069BAF"/>
-				</g>
-				<defs>
-					<clipPath id="clip0_872_8409">
-						<rect width="40" height="40" fill="white"/>
-					</clipPath>
-				</defs>
-			</svg>
-
-		</div>
-		<div class="title">вы успешно подписались на рассылку</div>
-		<div class="btn btn-primary" data-fancybox-close>Хорошо</div>
-	</div>
+    <div class="centered-modal subscription" id="subscription">
+    <div class="title">успешно подписались на уведомления!</div>
+    <button class="btn btn-full btn-primary" data-fancybox-close>
+      <span>Отлично</span>
+      <svg width="78" height="40" viewBox="0 0 78 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M0.5 19.9903H77.5358C70.6882 20.6751 56.9929 17.7306 56.9929 0.474609M77.5358 20.0797C70.6882 19.395 56.9929 22.3395 56.9929 39.5955"
+            stroke="white" />
+      </svg>
+    </button>
+  </div>
 
 	<div class="modal search" id="search">
 		<div class="modal-wrap">
