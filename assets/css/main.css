@@ -8146,6 +8146,29 @@ main {
 .btn span {
   margin-right: 15px;
 }
+
+@media only screen and (max-width: 991px) {
+  .btn span[data-mobile-text] {
+    font-size: 0;
+  }
+
+  .btn span[data-mobile-text]::after {
+    content: attr(data-mobile-text);
+    font-size: 16px;
+    font-family: Geologica, sans-serif;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .btn span,
+  .btn span[data-mobile-text]::after {
+    font-size: 12px;
+  }
+
+  .btn svg {
+    width: 40px;
+    height: auto;
+  }
+}
 .btn-primary {
   color: #60514f;
 }
@@ -11510,6 +11533,7 @@ section:has(.shops-images) {
 
   #item-properties {
     height: 85vh;
+    overflow-y: auto;
   }
 
   #sizes-table {
