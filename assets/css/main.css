@@ -6068,7 +6068,7 @@ footer .footer-bottom .links a:nth-child(1) {
     right: 0;
     top: 0;
     bottom: 0;
-    padding: 28px 0 28px 28px;
+    padding: 28px 0 0 28px;
     overflow: visible;
   }
   .fancybox__container .modal.search .modal-wrap > .row {
@@ -6077,6 +6077,8 @@ footer .footer-bottom .links a:nth-child(1) {
 }
 .fancybox__container .modal.search .modal-wrap {
   width: 100%;
+  overflow-y: auto;
+  padding-bottom: 28px;
 }
 .fancybox__container .modal.search .modal-wrap > .title {
   font-weight: 500;
@@ -11492,6 +11494,10 @@ section:has(.shops-images) {
 
   .header-mobile-menu__nav {
     height: 100%;
+  }
+
+  .header-mobile-menu__nav ul {
+    margin-bottom: 20px;
   }
 
   .media-cards::-webkit-scrollbar {
